@@ -59,50 +59,6 @@ By the end of this course, participants will be able to:
 
 ---
 
-## Repository Structure
-
-```
-IISc-LLM/
-├── week-01-llm-foundations-1/        # LLM Foundations I
-│   ├── 1.1-transformer-architecture.ipynb
-│   └── 1.2-gpt2.ipynb
-├── week-02-llm-foundations-2/        # LLM Foundations II
-│   ├── 2.1-modern-architectures.ipynb
-│   └── 2.2-mixture-of-experts.ipynb
-├── week-03-gpu-basics/               # GPU Basics
-│   ├── 3.1-gpu-architecture.ipynb
-│   └── 3.2-parallelism.ipynb
-├── week-04-inference/                # Inference
-│   ├── 4.1-inference-strategies.ipynb
-│   └── 4.2-inference-math.ipynb
-├── week-05-efficient-inference/      # Efficient Inference & Quantization
-│   ├── 5.1-kv-caching.ipynb
-│   └── 5.2-quantization.ipynb
-├── week-06-inference-engines/        # Inference Engines
-│   └── 6.1-inference-engines-multi-gpu.ipynb
-├── week-07-rag-fundamentals/         # RAG Fundamentals
-│   └── 7.1-rag-fundamentals.ipynb
-├── week-08-rag/                      # RAG
-│   ├── 8.1-evaluating-rag.ipynb
-│   └── 8.2-react-framework.ipynb
-├── week-09-reasoning-agents/         # Reasoning & Agents
-│   ├── 9.1-tool-calling-agents.ipynb
-│   └── 9.2-fine-tuning-tool-calling.ipynb
-├── week-10-instruction-tuning/       # Instruction Tuning & Alignment
-│   ├── 10.1-instruction-tuning.ipynb
-│   └── 10.2-alignment-rlhf-dpo.ipynb
-├── week-11-rl-reasoning/             # RL & Reasoning
-│   ├── 11.1-more-rl.ipynb
-│   └── 11.2-chain-of-thought.ipynb
-├── week-12-evaluation/               # Evaluation
-│   ├── 12.1-evaluation-1.ipynb
-│   └── 12.2-evaluation-2.ipynb
-├── requirements.txt                  # Python dependencies
-└── README.md
-```
-
----
-
 ## Setup
 
 ### Prerequisites
