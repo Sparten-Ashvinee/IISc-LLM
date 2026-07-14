@@ -1,0 +1,54 @@
+# TalentRAG Configuration
+
+data:
+  dataset_name: "arshkon/linkedin-job-postings"
+  max_records: 50000  # set to null for full dataset
+  cache_dir: "./cache"
+
+chunking:
+  max_chunk_tokens: 256
+  overlap_tokens: 32
+  metadata_fields: ["title", "company_name", "location", "formatted_experience_level"]
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  batch_size: 256
+  max_seq_length: 256
+
+indexing:
+  chroma_persist_dir: "./artifacts/chromadb"
+  chroma_collection: "linkedin_jobs"
+  bm25_path: "./artifacts/bm25.pkl"
+
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  ttl: 3600  # cache TTL in seconds
+  enabled: true
+
+reranker:
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  top_k: 20  # candidates from retriever
+  rerank_top_k: 5  # final results after reranking
+
+generation:
+  model_name: "mistralai/Mistral-7B-Instruct-v0.3"
+  quantization: "4bit"  # 4bit, 8bit, or none
+  max_new_tokens: 512
+  temperature: 0.1
+  top_p: 0.9
+
+hallucination_guard:
+  nli_model: "microsoft/deberta-v3-base"
+  entailment_threshold: 0.7
+  enabled: true
+
+retrieval:
+  dense_weight: 0.6
+  sparse_weight: 0.4
+  top_k: 20  # candidates before reranking
+
+serving:
+  host: "0.0.0.0"
+  port: 8000

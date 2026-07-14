@@ -1,0 +1,39 @@
+# Core
+torch>=2.1.0
+transformers>=4.36.0
+datasets>=2.16.0
+sentence-transformers>=2.3.0
+
+# Indexing
+chromadb>=0.4.22
+rank-bm25>=0.2.2
+
+# Caching
+redis>=5.0.0
+
+# Re-ranking
+# (uses sentence-transformers cross-encoder)
+
+# Generation
+accelerate>=0.25.0
+bitsandbytes>=0.42.0
+
+# Hallucination guard
+scipy>=1.11.0
+
+# Evaluation
+ragas>=0.1.0
+rouge-score>=0.1.2
+nltk>=3.8.1
+
+# Serving
+fastapi>=0.108.0
+uvicorn>=0.25.0
+streamlit>=1.30.0
+
+# Data & utils
+pandas>=2.1.0
+numpy>=1.24.0
+matplotlib>=3.8.0
+tqdm>=4.66.0
+pyyaml>=6.0.1
